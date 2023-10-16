@@ -1,0 +1,103 @@
+/* Styles for the contact form */
+#contactPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+
+}
+
+/* Show the popup when active */
+#contactPopup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contact-form {
+    max-width: 500px;
+    /* Increased container width */
+    padding: 30px;
+    /* Increased padding for better spacing */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* Increased border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 90px;
+    /* Increased margin for spacing */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    /* Increased margin for spacing */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    /* Allow vertical resizing of textarea */
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Add transition effect */
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 600px) {
+    .contact-form {
+        max-width: 90%;
+        /* Adjust for smaller screens */
+        padding: 20px;
+    }
+}
+
+.close-button {
+    position: absolute;
+    margin-bottom: 20px;
+    top: -5px;
+    right: 10px;
+    font-size: 20px;
+    padding: 1px 1px;
+    background: none;
+    max-width: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 2px;
+    color: rgb(7, 0, 0);
+    outline: none;
+}
+
+.close-button:hover {
+    background-color: darkred;
+    color: white;
+}

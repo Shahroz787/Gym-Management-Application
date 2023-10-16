@@ -1,0 +1,102 @@
+body {
+    background-image: url("gymbackground4.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-position: 50% 50%; /*image ki position set kersekte*/
+}
+
+.login-heading {
+    background-color: #0a0a0aad;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-heading h1 {
+    font-family: 'Your Main Heading Font', sans-serif;
+    font-size: 36px;
+    margin: 0;
+}
+
+.login-heading img {
+    max-width: 100px; /* Adjust the max width as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.sub-heading {
+    font-family: 'Your Sub Heading Font', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+#loginContainer {
+    background-color: #0a0a0aad;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(242, 255, 0);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(249, 249, 0, 0.648);
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 10px;
+    text-align:center;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #ff0303;
+    padding: 1px;
+    text-align: left;
+    margin-top: 1px;
+    
+}

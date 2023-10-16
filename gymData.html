@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Admission Data</title>
+  <link rel="stylesheet" type="text/css" href="gymData.css">
+  <link rel="stylesheet" type="text/css" href="gymform.css">
+  <link rel="stylesheet" type="text/css" href="gymDatacontact.css">
+
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Gym logo.png" alt="Gym Logo">
+      <h1 class="header">SHEROO | Gym Admission Data</h1>
+    </div>
+
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#" id="opencontactLink">Contact</a>
+      <a href="#" id="openFormLink">Form</a>
+    </div>
+    <input type="text" id="searchAge" placeholder="Search by id , Name , Phone , Gender , Membership">
+  </nav>
+
+
+
+  <div id="dataContainer" class="data-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Phone</th>
+          <th>Gender</th>
+          <th>Membership</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div id="editFormContainer" class="edit-form-overlay">
+    <div class="edit-form">
+      <button id="editCloseButton" class="edit-CloseButton">✕</button>
+
+      <h2>Edit Entry</h2>
+
+      <form id="editForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" value="">
+        <label for="age">Age:</label>
+        <input type="text" id="age" value="">
+        <label for="gender">Gender:</label>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" value="">
+        <select id="gender" name="gender" value="">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="membership">Membership:</label>
+        <select id="membership" name="membership" value="">
+          <option value="monthly">monthly</option>
+          <option value="quarterly">quarterly</option>
+          <option value="annual">annual</option>
+        </select>
+
+        <button type="button" id="saveButton" onclick="saveEdit()">Save</a>
+        </button>
+
+      </form>
+      <div id="noti" class="noti-form">
+        <div class="noti-message">
+          Entry successfully updated!
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="formsection" class="container-overlay">
+
+    <div class="container">
+      <button id="form-closeButton" class="form-closeButton">✕</button> <!-- Close button added -->
+      <h1>SHEROO ADMISSION FORM</h1>
+      <form id="gymForm">
+        <label for="name">Name:</label>
+        <input type="text" id="nameInput" placeholder="Name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="ageInput" placeholder="Age" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phoneInput" placeholder="Phone Number" required>
+        <p class="error-message" id="phoneError">Please enter a valid 11-digit phone number.</p>
+
+        <label for="gender">Gender:</label>
+        <select id="genderInput" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="membership">Membership Type:</label>
+        <select id="membershipInput" required>
+          <option value="monthly">Monthly</option>
+          <option value="quarterly">Quarterly</option>
+          <option value="annual">Annual</option>
+        </select>
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+
+        <!-- <div id="outputSection" class="output-overlay">
+          <div class="output">
+          
+          </div>
+          <div>
+            <button id="printButton">Print</button>
+          </div>
+        </div> -->
+
+      <div id="notii" class="noti-formm">
+        <div class="noti-messagee">
+          Entry successfully updated!
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- contact form -->
+
+  <div id="contactPopup" class="container-overlay">
+    <div class="container">
+      <button id="contactCloseButton" class="close-button">✕</button>
+      <h1>Contact Us</h1>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="nameInput" placeholder="Your Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="emailInput" placeholder="Your Email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="messageInput" placeholder="Your Message" required></textarea>
+
+        <button type="submit" id="submitContact">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script src="gymData.js">
+    // Call fetchAndPopulateEntry when the page loads
+    fetchAndPopulateEntry();
+  </script>
+  <script src="gymform.js"></script>
+  <script src="gymDatacontact.js"></script>
+</body>
+
+</html>
