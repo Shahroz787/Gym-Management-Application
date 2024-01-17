@@ -28,7 +28,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     
     // Send login data to the backend
     try {
-        const response = await fetch("http://localhost:3000/login", {
+        const response = await fetch("http://localhost:8080/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
