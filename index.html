@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Login</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="manifest" href="manifest.json" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="assets/icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-96x96.png" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-128x128.png" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-384x384.png" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+    <meta name="theme-color" content="#db4938" />
+  </head>
+  <body>
     <div id="loginContainer">
-        <div class="login-heading">
-            <img src="Gym logo.png" alt="Gym Logo">
-            <h1>SHEROO GYM</h1>
-        </div>
-        <h2 class="sub-heading">Login</h2>
-        <form id="loginForm">
-            <label for="adminID">Admin ID:</label>
-            <input type="text" id="adminID" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
-            
-            <button type="submit">Login</button>
-        </form>
-        <div id="notificationContainer"></div>
+      <div class="login-heading">
+        <img src="Gym logo.png" alt="Gym Logo" />
+        <h1>SHEROO GYM</h1>
+      </div>
+      <h2 class="sub-heading">Login</h2>
+      <form id="loginForm">
+        <label for="adminID">Admin ID:</label>
+        <input type="text" id="adminID" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required />
+
+        <button type="submit">Login</button>
+      </form>
+      <div id="notificationContainer"></div>
     </div>
     <script src="login.js"></script>
-</body>
+  </body>
 </html>

@@ -9,7 +9,7 @@ let editingEntryId = null; // Store the ID of the entry being edited
 // Define urlParams to extract query parameters
 const urlParams = new URLSearchParams(window.location.search);
 
-async function fetchAdmissionData() {
+async function fetchAdmissionData() { 
   fetch('http://localhost:8080/getAdmissionData')
     .then(response => response.json())
     .then(data => {
@@ -58,9 +58,7 @@ printButtons.forEach(button => {
 
 
 function showEntryDetails(id) {
-  const entry = findEntryById(id); // Implement a function to fetch entry details based on the ID
-  // Use the entry data to populate a dialogue box and show it
-  // You can use a modal or a custom dialogue box for this
+  const entry = findEntryById(id); 
 }
 
 async function findEntryById(id) {
@@ -91,9 +89,6 @@ async function findEntryById(id) {
 async function printEntryData(id) {
   console.log('ID parameter:', id);
   try {
-    // const entry = await findEntryById(id);
-    // console.log('Entry fetched:', entry);
-    
     const response = await fetch(`http://localhost:8080/getAdmissionData/${id}`);
     if (!response.ok) {
       throw new Error(`Failed to fetch entry: ${response.statusText}`);
@@ -164,13 +159,8 @@ async function showEditForm(id) {
     document.getElementById('gender').value = entry.gender;
     document.getElementById('membership').value = entry.membership;
 
-    // Display the edit form overlay
     editFormContainer.style.display = "block";
 
-
-
-    // Redirect to the edit page with the entry ID as a query parameter
-    // window.location.href = `./gymEditData.html?id=${id}`;
   } catch (error) {
     console.error('Error fetching entry:', error);
   }
@@ -179,7 +169,6 @@ async function showEditForm(id) {
 async function fetchAndPopulateEntry() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get('id');
-  // const updated = urlParams.get('updated');
 
   if (!id) {
     console.error('Entry ID not provided.');
@@ -244,7 +233,6 @@ async function saveEdit() {
 
     // Hide the notification after a delay
     setTimeout(() => {
-      // notiElement.style.display = "none"; // Change display style back to "none" to hide the notification
       window.location.href = `./gymData.html`;
     }, 1000);
   } catch (error) {
@@ -285,8 +273,6 @@ async function deleteEntry(id) {
 }
 
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('.navbar .nav-links a');
   const dataContainer = document.getElementById('dataContainer');
@@ -300,46 +286,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Add an event listener to the search input
   searchInput.addEventListener('input', handleSearch);
 
-  // Function to handle the search
-  // function handleSearch() {
-  //   const searchValue = searchInput.value.toLowerCase();
-  //   const dataRows = document.querySelectorAll('.data-row');
-
-  //   dataRows.forEach(row => {
-  //     const ageCell = row.querySelector('td:nth-child(2)'); // Assuming age is in the second column
-  //     const age = ageCell.textContent.trim().toLowerCase();
-
-  //     if (age.startsWith(searchValue)) {
-  //       row.style.display = 'table-row';
-  //     } else {
-  //       row.style.display = 'none';
-  //     }
-  //   });
-
-  //   dataRows.forEach(row => {
-  //     const nameCell = row.querySelector('td:nth-child(1)'); // Assuming age is in the second column
-  //     const name = nameCell.textContent.trim().toLowerCase();
-
-  //     if (name.includes(searchValue)) {
-  //       row.style.display = 'table-row';
-  //     } else {
-  //       row.style.display = 'none';
-  //     }
-  //   });
-
-  //   dataRows.forEach(row => {
-  //     const genderCell = row.querySelector('td:nth-child(3)'); // Assuming age is in the second column
-  //     const gender = genderCell.textContent.trim().toLowerCase();
-
-  //     if (gender.includes(searchValue)) {
-  //       row.style.display = 'table-row';
-  //     } else {
-  //       row.style.display = 'none';
-  //     }
-  //   });
-
-
-  // }
+ 
   // Function to handle the search
   function handleSearch() {
     const searchValue = searchInput.value.toLowerCase();

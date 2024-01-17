@@ -56,21 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(() => {
       notiMessage.style.display = "none";
-
-
-
-      // Assuming the 'outputSection' is a div where the form submission output will be displayed
-      // outputSection.innerHTML = `
-      //   <h2>Sheroo Submission Slip</h2>
-      //   <p>ID: ${uniqueId}</p>
-      //   <p>Name: ${customer}</p>
-      //   <p>Age: ${birthYear}</p>
-      //   <p>Phone: ${phone}</p>
-      //   <p>Gender: ${gender}</p>
-      //   <p>Membership: ${membership}</p>
-      // `;
-      // printButton.style.display = 'block';
-
     }, 2000);
 
     console.log(customer, age, phone, gender, membership);
@@ -104,32 +89,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   function generateUniqueId() {
-    // Implement your logic to generate a unique ID
-    // For example: "SG-1", "SG-2", ...
-    // const prefix = "SG-";
     const randomNumber = Math.floor(Math.random() * 1000) + 1; // Generate a random number
     return `${randomNumber}`;
   }
-
-  // Handle print button
-  // printButton.addEventListener('click', function () {
-  //   const printContents = outputSection.innerHTML;
-  //   const printStyle = document.createElement('style');
-  //   printStyle.innerHTML = `
-  //     @media print {
-  //       body {
-  //         color: white;
-  //       }
-  //     }
-  //   `;
-  //   document.head.appendChild(printStyle);
-
-  //   document.body.innerHTML = printContents;
-  //   window.print();
-  // });
-
-  // Hide the "Print" button initially
-  // printButton.style.display = 'none';
 
   closeButton.addEventListener('click', function () {
     formsection.classList.remove('active');

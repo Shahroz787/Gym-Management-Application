@@ -1,3 +1,22 @@
+// if ("serviceWorker" in navigator) {
+//     window.addEventListener("load", function () {
+//         navigator.serviceWorker
+//             .register("/serviceWorker.js")
+//             .then(res => {
+//                 console.log("service worker registered")
+//                 Notification.requestPermission().then(res => {
+//                     if (Notification.permission == 'granted') {
+//                         console.log("Granted permission")
+//                         return
+//                     }
+//                     console.log(res)
+//                 })
+//             })
+//             .catch(err => console.log("service worker not registered", err))
+//     })
+// }
+
+
 document.getElementById("loginForm").addEventListener("submit", async function(event) {
     event.preventDefault(); // Prevent form submission
     
@@ -9,7 +28,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     
     // Send login data to the backend
     try {
-        const response = await fetch("http://localhost:8080/login", {
+        const response = await fetch("http://localhost:3000/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
